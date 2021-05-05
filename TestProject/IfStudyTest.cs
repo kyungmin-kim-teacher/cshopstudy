@@ -101,5 +101,21 @@ namespace TestProject
             Assert.AreEqual(true, ifs.기념품줄까(2));
             Assert.AreEqual(false, ifs.기념품줄까(1));
         }
+
+        [TestMethod]
+        public void 오늘의야식_테스트()
+        {
+            IfStudy ifs = new IfStudy();
+
+            //햄버거가게_오픈, 떡볶이가게_오픈, 편의점_오픈
+            Assert.AreEqual("집으로", ifs.오늘의야식(false, false, false));
+            Assert.AreEqual("컵라면", ifs.오늘의야식(false, false, true));
+            Assert.AreEqual("떡볶이", ifs.오늘의야식(false, true, false));
+            Assert.AreEqual("떡볶이", ifs.오늘의야식(false, true, true));
+            Assert.AreEqual("햄버거", ifs.오늘의야식(true, false, false));
+            Assert.AreEqual("햄버거", ifs.오늘의야식(true, false, true));
+            Assert.AreEqual("햄버거", ifs.오늘의야식(true, true, false));
+            Assert.AreEqual("햄버거", ifs.오늘의야식(true, true, true));
+        }
     }
 }

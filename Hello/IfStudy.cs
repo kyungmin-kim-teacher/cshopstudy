@@ -77,5 +77,25 @@ namespace FirstCoding
                 return false;
             }
         }
+
+        public string 오늘의야식(bool 햄버거가게_오픈, bool 떡볶이가게_오픈,  bool 편의점_오픈)
+        {
+            if(햄버거가게_오픈)
+            {
+                return "햄버거";
+            } 
+            else if (떡볶이가게_오픈)
+            {
+                return "떡볶이";
+            }
+            else if (편의점_오픈)
+            {
+                return "컵라면";
+            } 
+            else
+            {
+                return "집으로";
+            }
+        }
     }
 }
