@@ -15,7 +15,9 @@ namespace FirstCoding
 
         public int myabs(int v)
         {
-            return 2;
+            if (v < 0)
+                return v * -1;
+            return v;
         }
 
         public int mymax(int v1, int v2)
